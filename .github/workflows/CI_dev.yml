@@ -1,0 +1,32 @@
+name: CI_DEV_BRANCH
+
+on:
+  
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+  workflow_dispatch:
+
+jobs:
+  Compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile BackEnd
+        run: |
+          cd backend
+          npm run build
+      
+      - name: Compile FrontEnd
+        run: |
+          cd frontend
+          npm install
+          npm run build
+        
+        env:
+          CI: false
+
