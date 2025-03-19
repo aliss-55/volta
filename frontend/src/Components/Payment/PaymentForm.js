@@ -14,7 +14,7 @@ function PaymentForm() {
         card: '',
         installmentsToPay: 1,
         paymentDate: new Date(),
-        amount: 0,
+        amount: '',
     });
 
     const [installmentValue, setInstallmentValue] = useState(0); // Valor de cada cuota
@@ -111,7 +111,7 @@ function PaymentForm() {
                 card: '',
                 installmentsToPay: 1,
                 paymentDate: new Date(),
-                amount: card.availableLimit += amount,
+                amount: '',
             });
             setInstallmentValueWithInterest(0);
             setInstallmentValue(0);
