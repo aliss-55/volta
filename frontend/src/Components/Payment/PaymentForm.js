@@ -111,7 +111,7 @@ function PaymentForm() {
                 card: '',
                 installmentsToPay: 1,
                 paymentDate: new Date(),
-                amount: 0,
+                amount: card.availableLimit += amount,
             });
             setInstallmentValueWithInterest(0);
             setInstallmentValue(0);
