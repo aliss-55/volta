@@ -103,8 +103,8 @@ function PaymentForm() {
             });
     
             // Forzar actualización de la información después del pago
-            await getPurchases(); 
-            await getCards();  // Asegura que los datos de la tarjeta también se actualicen
+            await getCards();
+            await getPurchases();  // Asegura que los datos de la tarjeta también se actualicen
     
             setInputState({
                 purchaseId: '',
